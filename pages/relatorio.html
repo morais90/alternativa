@@ -134,7 +134,7 @@
 <body class="grey lighten-3">
 
   <!--Main Navigation-->
-  <header>
+  <header class="d-print-none">
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
       <div class="container-fluid">
@@ -176,7 +176,7 @@
     <!-- Navbar -->
 
     <!-- Sidebar -->
-    <div class="sidebar-fixed position-fixed">
+    <div class="sidebar-fixed position-fixed d-print-none">
 
       <a class="logo-wrapper waves-effect text-center">
         <img src="../img/logo.png" class="img-fluid" alt="Alternativa">
@@ -204,7 +204,7 @@
     <div class="container-fluid mt-5">
 
       <!-- Heading -->
-      <div class="card mb-4 wow fadeIn">
+      <div class="card mb-4 wow fadeIn d-print-none">
 
         <!--Card content-->
         <div class="card-body d-sm-flex justify-content-between">
@@ -212,49 +212,17 @@
           <h4 class="mb-2 mb-sm-0 pt-1">
             <a href="#">Início</a>
             <span>/</span>
-            <a href="/apenados">Apenados</a>
+            <a href="/pages/apenados">Apenados</a>
             <span>/</span>
-            <a href="/apenado">Jorge Lacerda</a>
+            <a href="/pages/apenado">Jorge Lacerda</a>
           </h4>
         </div>
       </div>
       <!-- Heading -->
 
-      <div class="row mb-4">
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body text-center">
-              <h2 class="card-title">100 horas</h2>
-              <h6 class="card-subtitle mb-2 text-muted">a prestar<h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body text-center">
-              <h2 class="card-title">30 horas (30%)</h2>
-              <h6 class="card-subtitle mb-2 text-muted">prestadas<h6>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-4 wow fadeIn">
-        <div class="card-body text-center">
-          INSTITUIÇÃO ATUAL: <select class="custom-select" style="max-width: 200px">
-            <option selected>Hospital São José</option>
-            <option>Casa da Criança</option>
-            <option>Aquarela</option>
-            <option>Viva Bicho</option>
-            <option>A Vila Social</option>
-          </select>
-        </div>
-      </div>
-
       <div class="card mb-4 wow fadeIn">
         <div class="card-header bg-primary text-white">
-          Acompanhamento
+          Relatório - Jorge Lacerda (00.000.000-00)
         </div>
 
         <div class="card-body">
@@ -300,149 +268,23 @@
                 <td>2h</td>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <th>
+                  TOTAL
+                </th>
+                <th>
+                  6h:30
+                </th>
+              </tr>
+            </tfoot>
           </table>
         </div>
-      </div>
 
-      <div class="card mb-4 wow fadeIn">
-        <div class="card-header bg-primary text-white">
-          Informações
-        </div>
-
-        <div class="card-body">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-12 text-center">
-                <img src="../img/apenado.jpeg" alt="Apenado" width="400">
-                <h2>Jorge Lacerda<h2>
-              </div>
-              <div class="form-group col-md-12">
-                <label for="inputEmail4">CPF</label>
-                <input class="form-control" type="text" placeholder="00.000.000-00" readonly>
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="admin@ongana.com.br">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="******">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputAddress">Razão Social</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Ongana que eu gosto.">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputAddress2">Endereço</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Avenida Atrlântica, 666">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="inputCity"
-                placeholder="Balneário Camboriu">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputState">Estado</label>
-                <select id="inputState" class="form-control">
-                  <option selected>SC</option>
-                  <option>AC</option>
-                  <option>AL</option>
-                  <option>AP</option>
-                  <option>AM</option>
-                  <option>BA</option>
-                  <option>CE</option>
-                  <option>DF</option>
-                  <option>ES</option>
-                  <option>GO</option>
-                  <option>MA</option>
-                  <option>MT</option>
-                  <option>MS</option>
-                  <option>MG</option>
-                  <option>PA</option>
-                  <option>PB</option>
-                  <option>PR</option>
-                  <option>PE</option>
-                  <option>PI</option>
-                  <option>RR</option>
-                  <option>RO</option>
-                  <option>RJ</option>
-                  <option>RN</option>
-                  <option>RS</option>
-                  <option>SP</option>
-                  <option>SE</option>
-                  <option>TO</option>
-                </select>
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputZip">CEP</label>
-                <input type="text" class="form-control" id="inputZip"
-                placeholder="88330-476">
-              </div>
-
-              <div class="form-group col-md-6">
-                <label for="inputZip">Profissão</label>
-                <input type="text" class="form-control" placeholder="Profissão">
-              </div>
-
-              <div class="form-group col-md-12">
-                <label for="inputZip">Habilidades</label>
-                <textarea class="form-control" placeholder="Pintura, reforma, palestra..."></textarea>
-              </div>
-            </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#perfilModal">Salvar</button>
-            <a href="/pages/relatorio" class="btn btn-info">Gerar Relatório</a>
-            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#cruzamentoModal">
-              Encontrar melhor instituição
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="perfilModal" tabindex="-1" role="dialog" aria-labelledby="perfilModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="perfilModalLabel">Sucesso!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Seus dados foram salvos com sucesso!
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="cruzamentoModal" tabindex="-1" role="dialog" aria-labelledby="cruzamentoModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="perfilModalLabel">Cruzamento de serviço</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            Com base nos dados que cruzamos, a melhor opção de instituição para este apenado é o <strong>Hospital São José</strong>.
-
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="700" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Hospital%20S%C3%A3o%20Jos%C3%A9%20Rua%20Coronel%20Pedro%20Benedet%2C%20630&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.jetzt-drucken-lassen.de">https://www.jetzt-drucken-lassen.de</a></div><style>.mapouter{text-align:right;height:300px;width:700px;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:700px;}</style>Google Maps by <a href="https://www.embedgooglemap.net" rel="nofollow" target="_blank">Embedgooglemap.net</a></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
-          </div>
+        <div class="card-footer d-print-none">
+          <button type="button" class="btn btn-primary" onclick="print();">Imprimir</button>
         </div>
       </div>
     </div>
