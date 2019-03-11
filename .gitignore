@@ -105,3 +105,6 @@ venv.bak/
 
 #db config
 db.properties
+
+#databases to be imported
+*.csv
