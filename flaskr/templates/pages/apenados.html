@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Administrativo - Alternativa</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="../css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="../css/style.min.css" rel="stylesheet">
+  <style>
+
+  table a {
+    color: #0056b3 !important;
+  }
+
+  .map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+	.calendar {
+		margin: 0px 40px;
+	}
+	.popover.calendar-event-popover {
+		font-family: 'Roboto', sans-serif;
+		font-size: 12px;
+		color: rgb(120, 120, 120);
+		border-radius: 2px;
+		max-width: 300px;
+	}
+	.popover.calendar-event-popover h4 {
+		font-size: 14px;
+		font-weight: 900;
+	}
+	.popover.calendar-event-popover .location,
+	.popover.calendar-event-popover .datetime {
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: 5px;
+	}
+	.popover.calendar-event-popover .location > span,
+	.popover.calendar-event-popover .datetime > span {
+		margin-right: 10px;
+	}
+	.popover.calendar-event-popover .space,
+	.popover.calendar-event-popover .attending {
+		margin-top: 10px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid rgb(160, 160, 160);
+		font-weight: 700;
+	}
+	.popover.calendar-event-popover .space > .pull-right,
+	.popover.calendar-event-popover .attending > .pull-right {
+		font-weight: 400;
+	}
+	.popover.calendar-event-popover .attending {
+		margin-top: 5px;
+		font-size: 18px;
+		padding: 0px 10px 5px;
+	}
+	.popover.calendar-event-popover .attending img {
+		border-radius: 50%;
+		width: 40px;
+	}
+	.popover.calendar-event-popover .attending span.attending-overflow {
+		display: inline-block;
+		width: 40px;
+		background-color: rgb(200, 200, 200);
+		border-radius: 50%;
+		padding: 8px 0px 7px;
+		text-align: center;
+	}
+	.popover.calendar-event-popover .attending > .pull-right {
+		font-size: 28px;
+	}
+	.popover.calendar-event-popover a.btn {
+		margin-top: 10px;
+		width: 100%;
+		border-radius: 3px;
+	}
+	[data-toggle="calendar"] > .row > .calendar-day {
+		font-family: 'Roboto', sans-serif;
+		width: 14.28571428571429%;
+		border: 1px solid rgb(235, 235, 235);
+		border-right-width: 0px;
+		border-bottom-width: 0px;
+		min-height: 120px;
+	}
+	[data-toggle="calendar"] > .row > .calendar-day.calendar-no-current-month {
+		color: rgb(200, 200, 200);
+	}
+	[data-toggle="calendar"] > .row > .calendar-day:last-child {
+		border-right-width: 1px;
+	}
+
+	[data-toggle="calendar"] > .row:last-child > .calendar-day {
+		border-bottom-width: 1px;
+	}
+
+	.calendar-day > .events {
+		cursor: pointer;
+	}
+	.calendar-day > .events > .event h4 {
+		font-size: 12px;
+		font-weight: 700;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-bottom: 3px;
+	}
+	.calendar-day > .events > .event > .desc,
+	.calendar-day > .events > .event > .location,
+	.calendar-day > .events > .event > .datetime,
+	.calendar-day > .events > .event > .attending {
+		display: none;
+	}
+	.calendar-day > .events > .event > .progress {
+		height: 10px;
+	}
+  </style>
+</head>
+
+<body class="grey lighten-3">
+
+  <!--Main Navigation-->
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="#" target="_blank">
+          <strong class="blue-text">ALTERNATIVA</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-effect" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="perfil.html" class="nav-link border border-light rounded waves-effect">
+                <i class="fas fa-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+
+      <a class="logo-wrapper waves-effect text-center">
+        <img src="../img/logo.png" class="img-fluid" alt="Alternativa">
+      </a>
+
+      <div class="list-group list-group-flush">
+        <a href="/pages/dashboard" class="list-group-item waves-effect">
+          <i class="fas fa-chart-pie mr-3"></i>Dashboard
+        </a>
+        <a href="#" class="list-group-item waves-effect active">
+          <i class="fas fa-home mr-3"></i>Apenados
+        </a>
+        <a href="/pages/instituicoes" class="list-group-item waves-effect">
+          <i class="fas fa-users mr-3"></i>Instituições
+        </a>
+      </div>
+    </div>
+    <!-- Sidebar -->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="pt-5 mx-lg-5">
+    <div class="container-fluid mt-5">
+
+      <!-- Heading -->
+      <div class="card mb-4 wow fadeIn">
+
+        <!--Card content-->
+        <div class="card-body d-sm-flex justify-content-between">
+
+          <h4 class="mb-2 mb-sm-0 pt-1">
+            <a href="#">Início</a>
+            <span>/</span>
+            <a href="/pages/apenados">Apenados</a>
+          </h4>
+        </div>
+      </div>
+      <!-- Heading -->
+
+      <div class="card mb-4 wow fadeIn">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 text-right">
+              <a href="/pages/criar-apenado" class="btn btn-primary"><i class="fa fa-add"></i> Novo apenado</a>
+            </div>
+          </div>
+          
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Cidade</th>
+                <th>Horas restantes</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">João Alberto</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>10</td>
+              </tr>
+
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">Gustavo Ferreira</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">Carlos Conte</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">Michele Jackson</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">Ana Paula Cardoso</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">José Rodrigues</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">Luiza Camargo</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td><a href="/pages/apenado" class="btn-link">Alexandre Silva</a></td>
+                <td>00.000.000-00</td>
+                <td>Balneário Camboriú</td>
+                <td>76</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2018 Copyright:
+      <a href="#" target="_blank"> Alternativa </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="../js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="../js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+</html>
